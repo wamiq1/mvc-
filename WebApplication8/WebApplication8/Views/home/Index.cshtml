@@ -1,0 +1,51 @@
+﻿@model WebApplication8.Models.user
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>
+                    @Html.ValidationSummary(false,""
+                   )
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.TextBoxFor(x=> x.user_name)</td>
+            </tr>
+            <tr>
+                <td>@Html.TextBoxFor(x => x.user_email)</td>
+            </tr>
+            <tr>
+                <td>@Html.TextBoxFor(x => x.user_pass)</td>
+            </tr>
+            <tr>
+                <td>@Html.TextBoxFor(x => x.user_cpass)</td>
+            </tr>
+            <tr>
+                <td>@Html.TextBoxFor(x => x.user_age)</td>
+            </tr>
+            <tr>
+                <td>@Html.TextBoxFor(x => x.user_qualification)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="btn" />
+                </td>
+            </tr>
+
+        </table>
+    }
+
+</body>
+</html>
